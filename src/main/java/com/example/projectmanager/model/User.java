@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "usr")
+@Table(name = "USR")
 public class User {
 
     @Id
@@ -21,7 +21,7 @@ public class User {
     @Column(name = "role")
     private String role;
 
-    @Column(name = "PASSWORD")
+    @Column(name = "password")
     private String password;
 
     public User() {

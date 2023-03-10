@@ -24,18 +24,9 @@ public class TaskDTO {
 
     private User creator;
 
-//    private Project projectId;
 
     public TaskDTO() {
     }
-
-//    public Project getProjectId() {
-//        return projectId;
-//    }
-//
-//    public void setProjectId(Project projectId) {
-//        this.projectId = projectId;
-//    }
 
     public String getName() {
         return name;

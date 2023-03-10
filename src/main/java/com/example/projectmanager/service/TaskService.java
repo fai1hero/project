@@ -71,6 +71,7 @@ public class TaskService {
             taskToUpdate.setStatus(newTask.getStatus());
             taskToUpdate.setStatusChangedAt(new Date());
         }
+        taskRepository.save(taskToUpdate);
     }
 
     public void deleteTask(int taskId) {

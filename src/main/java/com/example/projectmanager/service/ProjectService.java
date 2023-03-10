@@ -36,7 +36,12 @@ public class ProjectService {
     }
 
     public void createProject(ProjectDTO projectDTO) {
-        projectRepository.save(convertToProject(projectDTO));
+
+        Project project = new Project();
+        project.setProjectName(projectDTO.getProjectName());
+        project.setMainProjectId(projectDTO.getMainProjectId());
+        if (project.getMainProjectId() != null) findProjectById(project.mainProjectId);
+        projectRepository.save(project);
     }
 
     public void updateProject(int id, ProjectDTO updatedProjectDTO) {

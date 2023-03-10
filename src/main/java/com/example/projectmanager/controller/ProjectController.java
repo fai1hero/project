@@ -27,7 +27,7 @@ public class ProjectController {
 
     @GetMapping("/{id}")
     public ProjectDTO getProjectById(@PathVariable("id") int id) {
-       return projectService.findProjectById(id);
+        return projectService.findProjectById(id);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
@@ -39,9 +39,9 @@ public class ProjectController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PatchMapping("/{id}")
-    public ProjectDTO updateProject(@RequestBody ProjectDTO updatedProject, @PathVariable("id") int id) {
+    public ResponseEntity<HttpStatus> updateProject(@RequestBody ProjectDTO updatedProject, @PathVariable("id") int id) {
         projectService.updateProject(id, updatedProject);
-        return projectService.findProjectById(id);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
