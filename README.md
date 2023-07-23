@@ -6,4 +6,4 @@
 username, password для admin (admin, password) для user (user, password) соответственно.
 
 
-Не смог запустить с базой данных H2(при включенном Spring Security), в проекте использую PostgreSQL.
+В проекте использую PostgreSQL.
